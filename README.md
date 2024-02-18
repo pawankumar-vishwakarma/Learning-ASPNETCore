@@ -4,6 +4,7 @@
     <li>ASP.NET Core</li>
     <li>Entity Framework Core</li>
     <li>Web API (RESTful)</li>
+    <li>Authentication & Authorization</li>
     <li>Identity Framework</li>
   </ol>
 <h1>ASP.NET Core</h1>
