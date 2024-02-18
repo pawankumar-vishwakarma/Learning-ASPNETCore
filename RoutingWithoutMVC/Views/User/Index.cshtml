@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index page of User Controller.</h1>
+<h1>Today's date and time @DateTime.Now</h1>
+@{
+    var name = "Pawan";
+    var age = 23;
+}
+
+<h2>Welcome @name Your age is @age</h2>
+<h2>@TempData["Data1"]</h2>
+@{
+    if(age >18)
+    {
+        // <h2>You are eligible to vote Mr. @ViewData["Data"]</h2>
+        // <h2>Date: @ViewData["Data2"]</h2>
+        // <h2>Array from User Controller:</h2>
+        // foreach(var item in (string[])ViewData["Array1"])
+        // {
+        //     <h2>@item</h2>
+        // }
+
+        // <h2>Welcome @ViewBag.Data1 , your age is @ViewBag.Data2 and you like the instruments </h2>
+        // foreach(var i in @ViewBag.arr1)
+        // {
+        //     <h2>@i</h2>
+        // }
+    }
+    else
+    {
+        <h2>You are not eligible.</h2>
+    }
+
+    for(int i = 0; i<10; i++)
+    {
+        <h2>@i</h2>
+    }
+}
+
+@{
+    string[] fruits = {"apple", "banana", "mango"};
+    foreach(var i in fruits)
+    {
+        <h2>@i</h2>
+    }
+}
+
+@* @{
+    foreach (var item in (string[])ViewData["Array1"])
+    {
+        <h2>@item</h2>
+    }
+} *@
+
+
+
