@@ -32,5 +32,3 @@
 <ul>
   <li>Detailed hand-written notes on each topic covered in this repository are available in the Notes directory.</li>
 </ul>
-
-<h3>Feel free to explore the repository, and I hope the notes and practical implementations prove helpful in your journey of learning ASP.NET Core technologies!</h3>
