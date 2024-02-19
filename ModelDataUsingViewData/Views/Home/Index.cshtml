@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    // var emp = ViewData["Employee"] as Employee;
+    // var emp = ViewBag.Employee;
+    // var emp = TempData["Employee"] as Employee;
+    var Employees = ViewData["Employees"] as List<Employee>;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+   @*  @{
+        if(emp != null)
+        {
+            <h2>ID : @emp.EmpId</h2>
+            <h2>Employee : @emp.EmpName</h2>
+            <h2>Designation : @emp.Designation</h2>
+            <h2>Salary : @emp.Salary</h2>
+        }
+        else
+        {
+            <h2>No Data Found !!!!</h2>
+        }
+    } *@
+
+
+    @{
+        if (Employees != null)
+        {
+            <table class="table table-bordered table-hover table-responsive">
+                <thead style="background-color : #f14141">
+                    <tr>
+                        <th>ID</th>
+                        <th>EmployeeName</th>
+                        <th>Designation</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{foreach (var item in Employees)
+                    {
+                       <tr>
+                            <td>@item.EmpId</td>
+                            <td>@item.EmpName</td>
+                            <td>@item.Designation</td>
+                            <td>@item.Salary</td>
+                       </tr>
+                    }
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h2>No Data Found !!!!</h2>
+        }
+    }
+</div>
