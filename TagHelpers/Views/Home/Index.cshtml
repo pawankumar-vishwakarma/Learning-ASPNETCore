@@ -1,0 +1,59 @@
+﻿@model Employee;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+@* <a href="/Home/Contact">Contact Page 1</a> *@  @* Normal HTML *@
+<br/>
+@* @Html.ActionLink("Contact Page 2","Contact","Home") *@ @* Used In MVC5 *@
+<br/>
+@* <a asp-controller="Home" asp-action="Contact">Conatact Page 3</a> *@ @* This is also usedin MVC5 *@
+
+
+@* <a href="/Home/Edit/1">Edit Page 1</a> 
+<br/>
+@Html.ActionLink("Edit Page 2","Edit","Home", new {id = 1}) 
+<br/>
+<a asp-controller="Home" asp-action="Edit" asp-route-id="1">Edit Page 3</a>  *@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form class="d-grid" asp-action="Index" asp-controller="Home" method="post">
+                <label asp-for="Name">Enter Name : </label>
+                <input asp-for="Name" class="form-control" placeholder="Enter Name"/><br/>
+                <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+                    <option value="">Select Gender</option>
+                </select>
+                <br/>
+                <input asp-for="Age" class="form-control" placeholder="Enter Age" /><br />
+                <input asp-for="Designation" class="form-control" placeholder="Enter Designation" /><br />
+                <input asp-for="Salary" class="form-control" placeholder="Enter Salary" /><br />
+                <label>Married : </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Married" value="Yes">
+                    <label class="form-check-label">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="Married" value="No">
+                    <label class="form-check-label">
+                        No
+                    </label>
+                </div>
+                <br/>
+                <label asp-for="Description"> Description </label>
+                <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+                <br/>
+                <input type="submit" value="Submit" class="btn btn-outline-primary btn-block" />
+            </form>
+        </div>
+    </div>
+</div>
