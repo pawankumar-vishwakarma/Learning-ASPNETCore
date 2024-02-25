@@ -1,0 +1,67 @@
+﻿@model ViewModels.Models.CollegeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <h2>Student Data </h2>
+    @if (Model.MyStudents.Any())
+    {
+        <table class="table table-bordered table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Class</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.MyStudents)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Gender</td>
+                        <td>@item.Standard</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Student data found..</p>
+    }
+    <br />
+    <h2>Teacher Data </h2>
+    @if (Model.MyTearchers.Any())
+    {
+        <table class="table table-bordered table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Qualification</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.MyTearchers)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Qualification</td>
+                        <td>@item.Salary</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Teacher data found...</p>
+    }
+</div>
+
