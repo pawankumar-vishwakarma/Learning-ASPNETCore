@@ -20,7 +20,7 @@
 <h1>Web API</h1>
 <ul>
   <li>Web API allows building RESTful services using ASP.NET Core.</li>
-  <li>Hand-written notes on Web API are available in the Notes file.
+  <li>Hand-written notes on Web API are available in the <a href="https://github.com/pawankumar-vishwakarma/Learning-ASPNETCore/tree/main/Notes"> Notes file. </a>
 </li>
 </ul>
 <h1>Identity Framework</h1>
